@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="claim_productionModelStoreContainer" CdmEntityContainer="claim_productionEntities">
+    <EntitySetMapping Name="apex_rules_companies">
+      <EntityTypeMapping TypeName="claim_productionModel.apex_rules_companies">
+        <MappingFragment StoreEntitySet="apex_rules_companies">
+          <ScalarProperty Name="rule_id" ColumnName="rule_id" />
+          <ScalarProperty Name="company_info" ColumnName="company_info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apex_rules_procedure_codes">
+      <EntityTypeMapping TypeName="claim_productionModel.apex_rules_procedure_codes">
+        <MappingFragment StoreEntitySet="apex_rules_procedure_codes">
+          <ScalarProperty Name="rule_id" ColumnName="rule_id" />
+          <ScalarProperty Name="procedure_code" ColumnName="procedure_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apex_rules_rulelist">
+      <EntityTypeMapping TypeName="claim_productionModel.apex_rules_rulelist">
+        <MappingFragment StoreEntitySet="apex_rules_rulelist">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="apply_primary" ColumnName="apply_primary" />
+          <ScalarProperty Name="apply_secondary" ColumnName="apply_secondary" />
+          <ScalarProperty Name="apply_predeterm" ColumnName="apply_predeterm" />
+          <ScalarProperty Name="apply_to_all" ColumnName="apply_to_all" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="rule_text" ColumnName="rule_text" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bad_payment_claims">
+      <EntityTypeMapping TypeName="claim_productionModel.bad_payment_claims">
+        <MappingFragment StoreEntitySet="bad_payment_claims">
+          <ScalarProperty Name="claimid" ColumnName="claimid" />
+          <ScalarProperty Name="claimdb" ColumnName="claimdb" />
+          <ScalarProperty Name="is_verified" ColumnName="is_verified" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="last_update" ColumnName="last_update" />
+          <ScalarProperty Name="verified_by" ColumnName="verified_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="batch_claim_list">
+      <EntityTypeMapping TypeName="claim_productionModel.batch_claim_list">
+        <MappingFragment StoreEntitySet="batch_claim_list">
+          <ScalarProperty Name="batch_id" ColumnName="batch_id" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="still_in_batch" ColumnName="still_in_batch" />
+          <ScalarProperty Name="last_send_date" ColumnName="last_send_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="call_claim_ids">
+      <EntityTypeMapping TypeName="claim_productionModel.call_claim_ids">
+        <MappingFragment StoreEntitySet="call_claim_ids">
+          <ScalarProperty Name="call_id" ColumnName="call_id" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calls">
+      <EntityTypeMapping TypeName="claim_productionModel.call">
+        <MappingFragment StoreEntitySet="calls">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="updated_on" ColumnName="updated_on" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="onhold_secs" ColumnName="onhold_secs" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="status_info" ColumnName="status_info" />
+          <ScalarProperty Name="duration_secs" ColumnName="duration_secs" />
+          <ScalarProperty Name="call_status" ColumnName="call_status" />
+          <ScalarProperty Name="talked_to_human" ColumnName="talked_to_human" />
+          <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="choices">
+      <EntityTypeMapping TypeName="claim_productionModel.choice">
+        <MappingFragment StoreEntitySet="choices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="call_id" ColumnName="call_id" />
+          <ScalarProperty Name="choice_id" ColumnName="choice_id" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="claim_batch">
+      <EntityTypeMapping TypeName="claim_productionModel.claim_batch">
+        <MappingFragment StoreEntitySet="claim_batch">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="batch_date" ColumnName="batch_date" />
+          <ScalarProperty Name="handling" ColumnName="handling" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="batch_info" ColumnName="batch_info" />
+          <ScalarProperty Name="server_name" ColumnName="server_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="claim_change_log">
+      <EntityTypeMapping TypeName="claim_productionModel.claim_change_log">
+        <MappingFragment StoreEntitySet="claim_change_log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="field_info" ColumnName="field_info" />
+          <ScalarProperty Name="old_data" ColumnName="old_data" />
+          <ScalarProperty Name="new_data" ColumnName="new_data" />
+          <ScalarProperty Name="change_date" ColumnName="change_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="claim_sent_history">
+      <EntityTypeMapping TypeName="claim_productionModel.claim_sent_history">
+        <MappingFragment StoreEntitySet="claim_sent_history">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="sent_date" ColumnName="sent_date" />
+          <ScalarProperty Name="send_type" ColumnName="send_type" />
+          <ScalarProperty Name="is_resend" ColumnName="is_resend" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="claim_status_history">
+      <EntityTypeMapping TypeName="claim_productionModel.claim_status_history">
+        <MappingFragment StoreEntitySet="claim_status_history">
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="date_of_change" ColumnName="date_of_change" />
+          <ScalarProperty Name="old_status_id" ColumnName="old_status_id" />
+          <ScalarProperty Name="new_status_id" ColumnName="new_status_id" />
+          <ScalarProperty Name="old_revisit_date" ColumnName="old_revisit_date" />
+          <ScalarProperty Name="new_revisit_date" ColumnName="new_revisit_date" />
+          <ScalarProperty Name="as_is_flag" ColumnName="as_is_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="claims">
+      <EntityTypeMapping TypeName="claim_productionModel.claim">
+        <MappingFragment StoreEntitySet="claims">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="updated_on" ColumnName="updated_on" />
+          <ScalarProperty Name="date_of_service" ColumnName="date_of_service" />
+          <ScalarProperty Name="amount_of_claim" ColumnName="amount_of_claim" />
+          <ScalarProperty Name="service_description" ColumnName="service_description" />
+          <ScalarProperty Name="patient_first_name" ColumnName="patient_first_name" />
+          <ScalarProperty Name="patient_dob" ColumnName="patient_dob" />
+          <ScalarProperty Name="patient_ssn" ColumnName="patient_ssn" />
+          <ScalarProperty Name="patient_address" ColumnName="patient_address" />
+          <ScalarProperty Name="doctor_first_name" ColumnName="doctor_first_name" />
+          <ScalarProperty Name="doctor_tax_number" ColumnName="doctor_tax_number" />
+          <ScalarProperty Name="doctor_license_number" ColumnName="doctor_license_number" />
+          <ScalarProperty Name="doctor_bcbs_number" ColumnName="doctor_bcbs_number" />
+          <ScalarProperty Name="doctor_phone_number" ColumnName="doctor_phone_number" />
+          <ScalarProperty Name="doctor_fax_number" ColumnName="doctor_fax_number" />
+          <ScalarProperty Name="doctor_address" ColumnName="doctor_address" />
+          <ScalarProperty Name="subscriber_first_name" ColumnName="subscriber_first_name" />
+          <ScalarProperty Name="subscriber_dob" ColumnName="subscriber_dob" />
+          <ScalarProperty Name="subscriber_number" ColumnName="subscriber_number" />
+          <ScalarProperty Name="subscriber_alternate_number" ColumnName="subscriber_alternate_number" />
+          <ScalarProperty Name="subscriber_ssn" ColumnName="subscriber_ssn" />
+          <ScalarProperty Name="subscriber_group_name" ColumnName="subscriber_group_name" />
+          <ScalarProperty Name="subscriber_group_number" ColumnName="subscriber_group_number" />
+          <ScalarProperty Name="subscriber_address" ColumnName="subscriber_address" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="open" ColumnName="open" />
+          <ScalarProperty Name="claimidnum" ColumnName="claimidnum" />
+          <ScalarProperty Name="claimdb" ColumnName="claimdb" />
+          <ScalarProperty Name="patient_middle_initial" ColumnName="patient_middle_initial" />
+          <ScalarProperty Name="patient_last_name" ColumnName="patient_last_name" />
+          <ScalarProperty Name="doctor_middle_initial" ColumnName="doctor_middle_initial" />
+          <ScalarProperty Name="doctor_last_name" ColumnName="doctor_last_name" />
+          <ScalarProperty Name="patient_address2" ColumnName="patient_address2" />
+          <ScalarProperty Name="patient_city" ColumnName="patient_city" />
+          <ScalarProperty Name="patient_state" ColumnName="patient_state" />
+          <ScalarProperty Name="patient_zip" ColumnName="patient_zip" />
+          <ScalarProperty Name="doctor_address2" ColumnName="doctor_address2" />
+          <ScalarProperty Name="doctor_city" ColumnName="doctor_city" />
+          <ScalarProperty Name="doctor_state" ColumnName="doctor_state" />
+          <ScalarProperty Name="doctor_zip" ColumnName="doctor_zip" />
+          <ScalarProperty Name="subscriber_middle_initial" ColumnName="subscriber_middle_initial" />
+          <ScalarProperty Name="subscriber_last_name" ColumnName="subscriber_last_name" />
+          <ScalarProperty Name="subscriber_address2" ColumnName="subscriber_address2" />
+          <ScalarProperty Name="subscriber_city" ColumnName="subscriber_city" />
+          <ScalarProperty Name="subscriber_state" ColumnName="subscriber_state" />
+          <ScalarProperty Name="subscriber_zip" ColumnName="subscriber_zip" />
+          <ScalarProperty Name="company_address_id" ColumnName="company_address_id" />
+          <ScalarProperty Name="resent_date" ColumnName="resent_date" />
+          <ScalarProperty Name="tracer_date" ColumnName="tracer_date" />
+          <ScalarProperty Name="on_hold_date" ColumnName="on_hold_date" />
+          <ScalarProperty Name="sent_date" ColumnName="sent_date" />
+          <ScalarProperty Name="import_update_flag" ColumnName="import_update_flag" />
+          <ScalarProperty Name="revisit_date" ColumnName="revisit_date" />
+          <ScalarProperty Name="handling" ColumnName="handling" />
+          <ScalarProperty Name="claim_type" ColumnName="claim_type" />
+          <ScalarProperty Name="primary_claimid" ColumnName="primary_claimid" />
+          <ScalarProperty Name="primary_claimdb" ColumnName="primary_claimdb" />
+          <ScalarProperty Name="clinic_id" ColumnName="clinic_id" />
+          <ScalarProperty Name="owner_id" ColumnName="owner_id" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="status_last_user_id" ColumnName="status_last_user_id" />
+          <ScalarProperty Name="status_last_date" ColumnName="status_last_date" />
+          <ScalarProperty Name="doctor_provider_id" ColumnName="doctor_provider_id" />
+          <ScalarProperty Name="doctor_dentrix_id" ColumnName="doctor_dentrix_id" />
+          <ScalarProperty Name="apex_override_default_message" ColumnName="apex_override_default_message" />
+          <ScalarProperty Name="apex_message_text" ColumnName="apex_message_text" />
+          <ScalarProperty Name="apex_custom_message_text" ColumnName="apex_custom_message_text" />
+          <ScalarProperty Name="apex_append_message_text" ColumnName="apex_append_message_text" />
+          <ScalarProperty Name="nea_number" ColumnName="nea_number" />
+          <ScalarProperty Name="override_address" ColumnName="override_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="claim_status">
+      <EntityTypeMapping TypeName="claim_productionModel.claim_status">
+        <MappingFragment StoreEntitySet="claimstatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="orderid" ColumnName="orderid" />
+          <ScalarProperty Name="user_visible" ColumnName="user_visible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clinics">
+      <EntityTypeMapping TypeName="claim_productionModel.clinic">
+        <MappingFragment StoreEntitySet="clinics">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="companies">
+      <EntityTypeMapping TypeName="claim_productionModel.company">
+        <MappingFragment StoreEntitySet="companies">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="updated_on" ColumnName="updated_on" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="group_name" ColumnName="group_name" />
+          <ScalarProperty Name="group_num" ColumnName="group_num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="company_contact_info">
+      <EntityTypeMapping TypeName="claim_productionModel.company_contact_info">
+        <MappingFragment StoreEntitySet="company_contact_info">
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="extension" ColumnName="extension" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="data_mapping_fields">
+      <EntityTypeMapping TypeName="claim_productionModel.data_mapping_fields">
+        <MappingFragment StoreEntitySet="data_mapping_fields">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="field_name" ColumnName="field_name" />
+          <ScalarProperty Name="field_type" ColumnName="field_type" />
+          <ScalarProperty Name="table_name" ColumnName="table_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="data_mapping_schema_data">
+      <EntityTypeMapping TypeName="claim_productionModel.data_mapping_schema_data">
+        <MappingFragment StoreEntitySet="data_mapping_schema_data">
+          <ScalarProperty Name="schema_id" ColumnName="schema_id" />
+          <ScalarProperty Name="mapping_field_id" ColumnName="mapping_field_id" />
+          <ScalarProperty Name="mapped_to_text" ColumnName="mapped_to_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="data_mapping_schemas">
+      <EntityTypeMapping TypeName="claim_productionModel.data_mapping_schemas">
+        <MappingFragment StoreEntitySet="data_mapping_schemas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="schema_name" ColumnName="schema_name" />
+          <ScalarProperty Name="data_type" ColumnName="data_type" />
+          <ScalarProperty Name="sqlstatement" ColumnName="sqlstatement" />
+          <ScalarProperty Name="server_name" ColumnName="server_name" />
+          <ScalarProperty Name="database_name" ColumnName="database_name" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="pw" ColumnName="pw" />
+          <ScalarProperty Name="allow_password_save" ColumnName="allow_password_save" />
+          <ScalarProperty Name="claim_id_column" ColumnName="claim_id_column" />
+          <ScalarProperty Name="company_namecolumn" ColumnName="company_namecolumn" />
+          <ScalarProperty Name="date_column" ColumnName="date_column" />
+          <ScalarProperty Name="sqlstatementsecondaries" ColumnName="sqlstatementsecondaries" />
+          <ScalarProperty Name="sqlstatementpredeterms" ColumnName="sqlstatementpredeterms" />
+          <ScalarProperty Name="claim_db_column" ColumnName="claim_db_column" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insurance_company_groups">
+      <EntityTypeMapping TypeName="claim_productionModel.insurance_company_groups">
+        <MappingFragment StoreEntitySet="insurance_company_groups">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="primary_provider" ColumnName="primary_provider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insurance_company_groups_filters">
+      <EntityTypeMapping TypeName="claim_productionModel.insurance_company_groups_filters">
+        <MappingFragment StoreEntitySet="insurance_company_groups_filters">
+          <ScalarProperty Name="icg_id" ColumnName="icg_id" />
+          <ScalarProperty Name="filter_text" ColumnName="filter_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="large_choices">
+      <EntityTypeMapping TypeName="claim_productionModel.large_choices">
+        <MappingFragment StoreEntitySet="large_choices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="call_id" ColumnName="call_id" />
+          <ScalarProperty Name="choice_id" ColumnName="choice_id" />
+          <ScalarProperty Name="operator" ColumnName="operator" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="message_recipients">
+      <EntityTypeMapping TypeName="claim_productionModel.message_recipients">
+        <MappingFragment StoreEntitySet="message_recipients">
+          <ScalarProperty Name="message_id" ColumnName="message_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="read" ColumnName="read" />
+          <ScalarProperty Name="read_date" ColumnName="read_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="message_status">
+      <EntityTypeMapping TypeName="claim_productionModel.message_status">
+        <MappingFragment StoreEntitySet="message_status">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="messages">
+      <EntityTypeMapping TypeName="claim_productionModel.message">
+        <MappingFragment StoreEntitySet="messages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="from_user_id" ColumnName="from_user_id" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="message_text" ColumnName="message_text" />
+          <ScalarProperty Name="message_status_id" ColumnName="message_status_id" />
+          <ScalarProperty Name="message_send_date" ColumnName="message_send_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="multiple_choice_answers">
+      <EntityTypeMapping TypeName="claim_productionModel.multiple_choice_answers">
+        <MappingFragment StoreEntitySet="multiple_choice_answers">
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="answer_text" ColumnName="answer_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notes">
+      <EntityTypeMapping TypeName="claim_productionModel.note">
+        <MappingFragment StoreEntitySet="notes">
+          <ScalarProperty Name="note_id" ColumnName="note_id" />
+          <ScalarProperty Name="call_id" ColumnName="call_id" />
+          <ScalarProperty Name="operator_id" ColumnName="operator_id" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="updated_on" ColumnName="updated_on" />
+          <ScalarProperty Name="note_text" ColumnName="note_text" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="procedures">
+      <EntityTypeMapping TypeName="claim_productionModel.procedure">
+        <MappingFragment StoreEntitySet="procedures">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="externalid" ColumnName="externalid" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="pl_date" ColumnName="pl_date" />
+          <ScalarProperty Name="ada_code" ColumnName="ada_code" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="tooth_range_start" ColumnName="tooth_range_start" />
+          <ScalarProperty Name="tooth_range_end" ColumnName="tooth_range_end" />
+          <ScalarProperty Name="surf_string" ColumnName="surf_string" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="provider_eligibility_companies">
+      <EntityTypeMapping TypeName="claim_productionModel.provider_eligibility_companies">
+        <MappingFragment StoreEntitySet="provider_eligibility_companies">
+          <ScalarProperty Name="per_id" ColumnName="per_id" />
+          <ScalarProperty Name="restriction_text" ColumnName="restriction_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="provider_eligibility_restrictions">
+      <EntityTypeMapping TypeName="claim_productionModel.provider_eligibility_restrictions">
+        <MappingFragment StoreEntitySet="provider_eligibility_restrictions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="provider_id" ColumnName="provider_id" />
+          <ScalarProperty Name="switch_to_provider_id" ColumnName="switch_to_provider_id" />
+          <ScalarProperty Name="insurance_id" ColumnName="insurance_id" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="question_insurance_companies">
+      <EntityTypeMapping TypeName="claim_productionModel.question_insurance_companies">
+        <MappingFragment StoreEntitySet="question_insurance_companies">
+          <ScalarProperty Name="question_id" ColumnName="question_id" />
+          <ScalarProperty Name="insurance_id" ColumnName="insurance_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="questions">
+      <EntityTypeMapping TypeName="claim_productionModel.question">
+        <MappingFragment StoreEntitySet="questions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="required_answer" ColumnName="required_answer" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="is_fork" ColumnName="is_fork" />
+          <ScalarProperty Name="popup_question_text" ColumnName="popup_question_text" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="is_classification" ColumnName="is_classification" />
+          <ScalarProperty Name="linked_status" ColumnName="linked_status" />
+          <ScalarProperty Name="default_revisit_date" ColumnName="default_revisit_date" />
+          <ScalarProperty Name="set_revisit_date" ColumnName="set_revisit_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="schema_migrations">
+      <EntityTypeMapping TypeName="claim_productionModel.schema_migrations">
+        <MappingFragment StoreEntitySet="schema_migrations">
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="splitter_codes">
+      <EntityTypeMapping TypeName="claim_productionModel.splitter_codes">
+        <MappingFragment StoreEntitySet="splitter_codes">
+          <ScalarProperty Name="Procedure_Code" ColumnName="Procedure_Code" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Split_Rule" ColumnName="Split_Rule" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="splitter_rule_details">
+      <EntityTypeMapping TypeName="claim_productionModel.splitter_rule_details">
+        <MappingFragment StoreEntitySet="splitter_rule_details">
+          <ScalarProperty Name="Split_Rule" ColumnName="Split_Rule" />
+          <ScalarProperty Name="Procedure_Code" ColumnName="Procedure_Code" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Rule_value" ColumnName="Rule_value" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="splitter_rules">
+      <EntityTypeMapping TypeName="claim_productionModel.splitter_rules">
+        <MappingFragment StoreEntitySet="splitter_rules">
+          <ScalarProperty Name="Split_Rule" ColumnName="Split_Rule" />
+          <ScalarProperty Name="Rule_Type" ColumnName="Rule_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="system_options">
+      <EntityTypeMapping TypeName="claim_productionModel.system_options">
+        <MappingFragment StoreEntitySet="system_options">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="is_importing" ColumnName="is_importing" />
+          <ScalarProperty Name="apex_folder" ColumnName="apex_folder" />
+          <ScalarProperty Name="last_import_date" ColumnName="last_import_date" />
+          <ScalarProperty Name="resend_revisit_date" ColumnName="resend_revisit_date" />
+          <ScalarProperty Name="resend_status" ColumnName="resend_status" />
+          <ScalarProperty Name="show_secondary_info_eclaims" ColumnName="show_secondary_info_eclaims" />
+          <ScalarProperty Name="max_claims_in_batch" ColumnName="max_claims_in_batch" />
+          <ScalarProperty Name="limit_predeterm_date" ColumnName="limit_predeterm_date" />
+          <ScalarProperty Name="predeterm_minimum_date" ColumnName="predeterm_minimum_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="unusual_payment_rules">
+      <EntityTypeMapping TypeName="claim_productionModel.unusual_payment_rules">
+        <MappingFragment StoreEntitySet="unusual_payment_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="process_code" ColumnName="process_code" />
+          <ScalarProperty Name="operator_code" ColumnName="operator_code" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="amount_type_code" ColumnName="amount_type_code" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_action_log">
+      <EntityTypeMapping TypeName="claim_productionModel.user_action_log">
+        <MappingFragment StoreEntitySet="user_action_log">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="action_id" ColumnName="action_id" />
+          <ScalarProperty Name="action_taken_time" ColumnName="action_taken_time" />
+          <ScalarProperty Name="claim_id" ColumnName="claim_id" />
+          <ScalarProperty Name="additional_notes" ColumnName="additional_notes" />
+          <ScalarProperty Name="call_id" ColumnName="call_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_logging_rules">
+      <EntityTypeMapping TypeName="claim_productionModel.user_logging_rules">
+        <MappingFragment StoreEntitySet="user_logging_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_preferences">
+      <EntityTypeMapping TypeName="claim_productionModel.user_preferences">
+        <MappingFragment StoreEntitySet="user_preferences">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="search_form_sent_date" ColumnName="search_form_sent_date" />
+          <ScalarProperty Name="open_search_form" ColumnName="open_search_form" />
+          <ScalarProperty Name="open_eclaims_form" ColumnName="open_eclaims_form" />
+          <ScalarProperty Name="claim_form_left" ColumnName="claim_form_left" />
+          <ScalarProperty Name="claim_form_top" ColumnName="claim_form_top" />
+          <ScalarProperty Name="claim_form_maximized" ColumnName="claim_form_maximized" />
+          <ScalarProperty Name="claim_form_width" ColumnName="claim_form_width" />
+          <ScalarProperty Name="claim_form_height" ColumnName="claim_form_height" />
+          <ScalarProperty Name="show_my_claims_first" ColumnName="show_my_claims_first" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="claim_productionModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="open_search_form" ColumnName="open_search_form" />
+          <ScalarProperty Name="open_eclaims_form" ColumnName="open_eclaims_form" />
+          <ScalarProperty Name="logged_in" ColumnName="logged_in" />
+          <ScalarProperty Name="viewing_claim_id" ColumnName="viewing_claim_id" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_admin" ColumnName="is_admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

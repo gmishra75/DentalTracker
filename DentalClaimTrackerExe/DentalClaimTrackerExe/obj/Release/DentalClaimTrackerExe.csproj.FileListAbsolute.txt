@@ -1,0 +1,9 @@
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\bin\Release\DentalClaimTrackerExe.exe.config
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\bin\Release\DentalClaimTrackerExe.exe
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\bin\Release\DentalClaimTrackerExe.pdb
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\bin\Release\log4net.dll
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\obj\Release\DentalClaimTrackerExe.csprojResolveAssemblyReference.cache
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\obj\Release\DentalClaimTrackerExe.exe
+F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\obj\Release\DentalClaimTrackerExe.pdb

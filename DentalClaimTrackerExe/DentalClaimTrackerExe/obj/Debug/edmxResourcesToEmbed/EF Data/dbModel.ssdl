@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="claim_productionModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="claim_productionModelStoreContainer">
+    <EntitySet Name="apex_rules_companies" EntityType="claim_productionModel.Store.apex_rules_companies" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="apex_rules_procedure_codes" EntityType="claim_productionModel.Store.apex_rules_procedure_codes" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="apex_rules_rulelist" EntityType="claim_productionModel.Store.apex_rules_rulelist" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="bad_payment_claims" EntityType="claim_productionModel.Store.bad_payment_claims" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="batch_claim_list" EntityType="claim_productionModel.Store.batch_claim_list" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="call_claim_ids" EntityType="claim_productionModel.Store.call_claim_ids" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="calls" EntityType="claim_productionModel.Store.calls" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="choices" EntityType="claim_productionModel.Store.choices" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="claim_batch" EntityType="claim_productionModel.Store.claim_batch" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="claim_change_log" EntityType="claim_productionModel.Store.claim_change_log" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="claim_sent_history" EntityType="claim_productionModel.Store.claim_sent_history" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="claim_status_history" EntityType="claim_productionModel.Store.claim_status_history" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="claims" EntityType="claim_productionModel.Store.claims" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="claimstatus" EntityType="claim_productionModel.Store.claimstatus" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="clinics" EntityType="claim_productionModel.Store.clinics" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="companies" EntityType="claim_productionModel.Store.companies" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="company_contact_info" EntityType="claim_productionModel.Store.company_contact_info" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="data_mapping_fields" EntityType="claim_productionModel.Store.data_mapping_fields" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="data_mapping_schema_data" EntityType="claim_productionModel.Store.data_mapping_schema_data" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="data_mapping_schemas" EntityType="claim_productionModel.Store.data_mapping_schemas" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="insurance_company_groups" EntityType="claim_productionModel.Store.insurance_company_groups" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="insurance_company_groups_filters" EntityType="claim_productionModel.Store.insurance_company_groups_filters" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="large_choices" EntityType="claim_productionModel.Store.large_choices" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="message_recipients" EntityType="claim_productionModel.Store.message_recipients" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="message_status" EntityType="claim_productionModel.Store.message_status" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="messages" EntityType="claim_productionModel.Store.messages" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="multiple_choice_answers" EntityType="claim_productionModel.Store.multiple_choice_answers" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="notes" EntityType="claim_productionModel.Store.notes" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="procedures" EntityType="claim_productionModel.Store.procedures" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="provider_eligibility_companies" EntityType="claim_productionModel.Store.provider_eligibility_companies" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="provider_eligibility_restrictions" EntityType="claim_productionModel.Store.provider_eligibility_restrictions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="question_insurance_companies" EntityType="claim_productionModel.Store.question_insurance_companies" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="questions" EntityType="claim_productionModel.Store.questions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="schema_migrations" EntityType="claim_productionModel.Store.schema_migrations" store:Type="Tables" store:Schema="dbo" store:Name="schema_migrations" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+      [schema_migrations].[version] AS [version]
+      FROM [dbo].[schema_migrations] AS [schema_migrations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="splitter_codes" EntityType="claim_productionModel.Store.splitter_codes" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="splitter_rule_details" EntityType="claim_productionModel.Store.splitter_rule_details" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="splitter_rules" EntityType="claim_productionModel.Store.splitter_rules" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="system_options" EntityType="claim_productionModel.Store.system_options" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="unusual_payment_rules" EntityType="claim_productionModel.Store.unusual_payment_rules" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="user_action_log" EntityType="claim_productionModel.Store.user_action_log" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="user_logging_rules" EntityType="claim_productionModel.Store.user_logging_rules" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="user_preferences" EntityType="claim_productionModel.Store.user_preferences" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="users" EntityType="claim_productionModel.Store.users" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+  <EntityType Name="apex_rules_companies">
+    <Key>
+      <PropertyRef Name="rule_id" />
+      <PropertyRef Name="company_info" />
+    </Key>
+    <Property Name="rule_id" Type="int" Nullable="false" />
+    <Property Name="company_info" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="apex_rules_procedure_codes">
+    <Key>
+      <PropertyRef Name="rule_id" />
+      <PropertyRef Name="procedure_code" />
+    </Key>
+    <Property Name="rule_id" Type="int" Nullable="false" />
+    <Property Name="procedure_code" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="apex_rules_rulelist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="apply_primary" Type="smallint" />
+    <Property Name="apply_secondary" Type="smallint" />
+    <Property Name="apply_predeterm" Type="smallint" />
+    <Property Name="apply_to_all" Type="smallint" />
+    <Property Name="name" Type="varchar" MaxLength="45" />
+    <Property Name="rule_text" Type="varchar" MaxLength="255" />
+    <Property Name="priority" Type="int" />
+  </EntityType>
+  <EntityType Name="bad_payment_claims">
+    <Key>
+      <PropertyRef Name="claimid" />
+      <PropertyRef Name="claimdb" />
+    </Key>
+    <Property Name="claimid" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="claimdb" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="is_verified" Type="smallint" Nullable="false" />
+    <Property Name="notes" Type="varchar(max)" Nullable="false" />
+    <Property Name="last_update" Type="datetime2" Precision="0" />
+    <Property Name="verified_by" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="batch_claim_list">
+    <Key>
+      <PropertyRef Name="batch_id" />
+      <PropertyRef Name="claim_id" />
+    </Key>
+    <Property Name="batch_id" Type="int" Nullable="false" />
+    <Property Name="claim_id" Type="int" Nullable="false" />
+    <Property Name="still_in_batch" Type="smallint" Nullable="false" />
+    <Property Name="last_send_date" Type="datetime2" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="call_claim_ids">
+    <Key>
+      <PropertyRef Name="call_id" />
+      <PropertyRef Name="claim_id" />
+    </Key>
+    <Property Name="call_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="claim_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="calls">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="operator" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="created_on" Type="datetime2" Precision="0" />
+    <Property Name="updated_on" Type="datetime2" Precision="0" />
+    <Property Name="claim_id" Type="int" />
+    <Property Name="onhold_secs" Type="int" />
+    <Property Name="start_time" Type="datetime2" Precision="0" />
+    <Property Name="status_info" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="duration_secs" Type="int" />
+    <Property Name="call_status" Type="int" />
+    <Property Name="talked_to_human" Type="smallint" />
+    <Property Name="parent_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="choices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="call_id" Type="int" />
+    <Property Name="choice_id" Type="int" />
+    <Property Name="operator" Type="nvarchar" MaxLength="255" />
+    <Property Name="question" Type="nvarchar" MaxLength="255" />
+    <Property Name="answer" Type="nvarchar" MaxLength="255" />
+    <Property Name="created_at" Type="datetime2" Precision="0" />
+    <Property Name="question_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="claim_batch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="batch_date" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="handling" Type="varchar" MaxLength="45" />
+    <Property Name="source" Type="int" />
+    <Property Name="batch_info" Type="varchar" MaxLength="200" />
+    <Property Name="server_name" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="claim_change_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="claim_id" Type="int" />
+    <Property Name="field_info" Type="varchar" MaxLength="50" />
+    <Property Name="old_data" Type="varchar(max)" />
+    <Property Name="new_data" Type="varchar(max)" />
+    <Property Name="change_date" Type="datetime2" Precision="0" />
+  </EntityType>
+  <EntityType Name="claim_sent_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="claim_id" Type="int" Nullable="false" />
+    <Property Name="sent_date" Type="date" Nullable="false" />
+    <Property Name="send_type" Type="int" />
+    <Property Name="is_resend" Type="smallint" />
+  </EntityType>
+  <EntityType Name="claim_status_history">
+    <Key>
+      <PropertyRef Name="claim_id" />
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="claim_id" Type="int" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="date_of_change" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="old_status_id" Type="int" Nullable="false" />
+    <Property Name="new_status_id" Type="int" Nullable="false" />
+    <Property Name="old_revisit_date" Type="datetime2" Precision="0" />
+    <Property Name="new_revisit_date" Type="datetime2" Precision="0" />
+    <Property Name="as_is_flag" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="claims">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="company_id" Type="int" />
+    <Property Name="created_by" Type="nvarchar" MaxLength="255" />
+    <Property Name="created_on" Type="datetime2" Precision="0" />
+    <Property Name="updated_on" Type="datetime2" Precision="0" />
+    <Property Name="date_of_service" Type="date" />
+    <Property Name="amount_of_claim" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="service_description" Type="nvarchar(max)" />
+    <Property Name="patient_first_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="patient_dob" Type="date" />
+    <Property Name="patient_ssn" Type="nvarchar" MaxLength="255" />
+    <Property Name="patient_address" Type="nvarchar" MaxLength="255" />
+    <Property Name="doctor_first_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="doctor_tax_number" Type="nvarchar" MaxLength="255" />
+    <Property Name="doctor_license_number" Type="nvarchar" MaxLength="255" />
+    <Property Name="doctor_bcbs_number" Type="nvarchar" MaxLength="255" />
+    <Property Name="doctor_phone_number" Type="nvarchar" MaxLength="255" />
+    <Property Name="doctor_fax_number" Type="nvarchar" MaxLength="255" />
+    <Property Name="doctor_address" Type="nvarchar" MaxLength="255" />
+    <Property Name="subscriber_first_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="subscriber_dob" Type="date" />
+    <Property Name="subscriber_number" Type="nvarchar" MaxLength="255" />
+    <Property Name="subscriber_alternate_number" Type="nvarchar" MaxLength="255" />
+    <Property Name="subscriber_ssn" Type="nvarchar" MaxLength="255" />
+    <Property Name="subscriber_group_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="subscriber_group_number" Type="nvarchar" MaxLength="255" />
+    <Property Name="subscriber_address" Type="nvarchar" MaxLength="255" />
+    <Property Name="notes" Type="nvarchar(max)" />
+    <Property Name="open" Type="smallint" />
+    <Property Name="claimidnum" Type="nvarchar" MaxLength="255" />
+    <Property Name="claimdb" Type="nvarchar" MaxLength="255" />
+    <Property Name="patient_middle_initial" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="patient_last_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="doctor_middle_initial" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="doctor_last_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="patient_address2" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="patient_city" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="patient_state" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="patient_zip" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="doctor_address2" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="doctor_city" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="doctor_state" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="doctor_zip" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="subscriber_middle_initial" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="subscriber_last_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="subscriber_address2" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="subscriber_city" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="subscriber_state" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="subscriber_zip" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="company_address_id" Type="int" Nullable="false" />
+    <Property Name="resent_date" Type="date" />
+    <Property Name="tracer_date" Type="date" />
+    <Property Name="on_hold_date" Type="date" />
+    <Property Name="sent_date" Type="date" />
+    <Property Name="import_update_flag" Type="smallint" Nullable="false" />
+    <Property Name="revisit_date" Type="date" />
+    <Property Name="handling" Type="nvarchar" MaxLength="45" />
+    <Property Name="claim_type" Type="int" />
+    <Property Name="primary_claimid" Type="nvarchar" MaxLength="255" />
+    <Property Name="primary_claimdb" Type="nvarchar" MaxLength="255" />
+    <Property Name="clinic_id" Type="int" />
+    <Property Name="owner_id" Type="int" />
+    <Property Name="status_id" Type="int" />
+    <Property Name="status_last_user_id" Type="int" />
+    <Property Name="status_last_date" Type="date" />
+    <Property Name="doctor_provider_id" Type="nvarchar" MaxLength="10" />
+    <Property Name="doctor_dentrix_id" Type="nvarchar" MaxLength="30" />
+    <Property Name="apex_override_default_message" Type="smallint" />
+    <Property Name="apex_message_text" Type="nvarchar" MaxLength="45" />
+    <Property Name="apex_custom_message_text" Type="nvarchar" MaxLength="255" />
+    <Property Name="apex_append_message_text" Type="smallint" />
+    <Property Name="nea_number" Type="nvarchar" MaxLength="45" />
+    <Property Name="override_address" Type="smallint" />
+  </EntityType>
+  <EntityType Name="claimstatus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="45" />
+    <Property Name="description" Type="varchar" MaxLength="500" />
+    <Property Name="orderid" Type="int" />
+    <Property Name="user_visible" Type="smallint" />
+  </EntityType>
+  <EntityType Name="clinics">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="companies">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="created_on" Type="datetime2" Precision="0" />
+    <Property Name="updated_on" Type="datetime2" Precision="0" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="group_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="group_num" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="company_contact_info">
+    <Key>
+      <PropertyRef Name="company_id" />
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="company_id" Type="int" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="address" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="city" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="state" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="zip" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="phone" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="extension" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="notes" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="address2" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="data_mapping_fields">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="field_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="field_type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="table_name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="data_mapping_schema_data">
+    <Key>
+      <PropertyRef Name="schema_id" />
+      <PropertyRef Name="mapping_field_id" />
+    </Key>
+    <Property Name="schema_id" Type="int" Nullable="false" />
+    <Property Name="mapping_field_id" Type="int" Nullable="false" />
+    <Property Name="mapped_to_text" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="data_mapping_schemas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="schema_name" Type="varchar" Nullable="false" MaxLength="75" />
+    <Property Name="data_type" Type="int" Nullable="false" />
+    <Property Name="sqlstatement" Type="varchar(max)" />
+    <Property Name="server_name" Type="varchar" MaxLength="100" />
+    <Property Name="database_name" Type="varchar" MaxLength="100" />
+    <Property Name="user_name" Type="varchar" MaxLength="100" />
+    <Property Name="pw" Type="varchar" MaxLength="100" />
+    <Property Name="allow_password_save" Type="smallint" Nullable="false" />
+    <Property Name="claim_id_column" Type="varchar" MaxLength="100" />
+    <Property Name="company_namecolumn" Type="varchar" MaxLength="100" />
+    <Property Name="date_column" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="sqlstatementsecondaries" Type="varchar(max)" />
+    <Property Name="sqlstatementpredeterms" Type="varchar(max)" />
+    <Property Name="claim_db_column" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="insurance_company_groups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" />
+    <Property Name="description" Type="varchar" MaxLength="45" />
+    <Property Name="primary_provider" Type="int" />
+  </EntityType>
+  <EntityType Name="insurance_company_groups_filters">
+    <Key>
+      <PropertyRef Name="icg_id" />
+      <PropertyRef Name="filter_text" />
+    </Key>
+    <Property Name="icg_id" Type="int" Nullable="false" />
+    <Property Name="filter_text" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="large_choices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="call_id" Type="int" />
+    <Property Name="choice_id" Type="int" />
+    <Property Name="operator" Type="nvarchar" MaxLength="255" />
+    <Property Name="question" Type="nvarchar" MaxLength="255" />
+    <Property Name="answer" Type="nvarchar" MaxLength="1000" />
+    <Property Name="created_at" Type="datetime2" Precision="0" />
+    <Property Name="question_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="message_recipients">
+    <Key>
+      <PropertyRef Name="message_id" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="message_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="read" Type="smallint" />
+    <Property Name="read_date" Type="datetime2" Precision="0" />
+  </EntityType>
+  <EntityType Name="message_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="messages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="from_user_id" Type="int" />
+    <Property Name="claim_id" Type="int" />
+    <Property Name="message_text" Type="varchar(max)" />
+    <Property Name="message_status_id" Type="int" />
+    <Property Name="message_send_date" Type="datetime2" Precision="0" />
+  </EntityType>
+  <EntityType Name="multiple_choice_answers">
+    <Key>
+      <PropertyRef Name="question_id" />
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="question_id" Type="int" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="answer_text" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="notes">
+    <Key>
+      <PropertyRef Name="note_id" />
+    </Key>
+    <Property Name="note_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="call_id" Type="int" />
+    <Property Name="operator_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="created_on" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="updated_on" Type="datetime2" Precision="0" />
+    <Property Name="note_text" Type="varchar" MaxLength="1000" />
+    <Property Name="claim_id" Type="int" />
+  </EntityType>
+  <EntityType Name="procedures">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="externalid" Type="int" Nullable="false" />
+    <Property Name="claim_id" Type="int" />
+    <Property Name="pl_date" Type="datetime2" Precision="0" />
+    <Property Name="ada_code" Type="varchar" MaxLength="10" />
+    <Property Name="description" Type="varchar" MaxLength="50" />
+    <Property Name="tooth_range_start" Type="int" />
+    <Property Name="tooth_range_end" Type="int" />
+    <Property Name="surf_string" Type="varchar" MaxLength="20" />
+    <Property Name="amount" Type="int" />
+  </EntityType>
+  <EntityType Name="provider_eligibility_companies">
+    <Key>
+      <PropertyRef Name="per_id" />
+      <PropertyRef Name="restriction_text" />
+    </Key>
+    <Property Name="per_id" Type="int" Nullable="false" />
+    <Property Name="restriction_text" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="provider_eligibility_restrictions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="provider_id" Type="varchar" MaxLength="45" />
+    <Property Name="switch_to_provider_id" Type="varchar" MaxLength="45" />
+    <Property Name="insurance_id" Type="int" />
+    <Property Name="start_date" Type="datetime2" Precision="0" />
+    <Property Name="end_date" Type="datetime2" Precision="0" />
+  </EntityType>
+  <EntityType Name="question_insurance_companies">
+    <Key>
+      <PropertyRef Name="question_id" />
+      <PropertyRef Name="insurance_id" />
+    </Key>
+    <Property Name="question_id" Type="int" Nullable="false" />
+    <Property Name="insurance_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="questions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="text" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="parent" Type="int" />
+    <Property Name="required_answer" Type="varchar" MaxLength="250" />
+    <Property Name="type" Type="int" Nullable="false" />
+    <Property Name="is_fork" Type="int" />
+    <Property Name="popup_question_text" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="order_id" Type="int" />
+    <Property Name="is_classification" Type="int" Nullable="false" />
+    <Property Name="linked_status" Type="int" />
+    <Property Name="default_revisit_date" Type="int" />
+    <Property Name="set_revisit_date" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'claim_production.dbo.schema_migrations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="schema_migrations">
+    <Key>
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="version" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="splitter_codes">
+    <Key>
+      <PropertyRef Name="Procedure_Code" />
+      <PropertyRef Name="Carrier" />
+    </Key>
+    <Property Name="Procedure_Code" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="Carrier" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="Split_Rule" Type="int" Nullable="false" />
+    <Property Name="Notes" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="splitter_rule_details">
+    <Key>
+      <PropertyRef Name="Split_Rule" />
+      <PropertyRef Name="Procedure_Code" />
+    </Key>
+    <Property Name="Split_Rule" Type="int" Nullable="false" />
+    <Property Name="Procedure_Code" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="Rule_value" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="splitter_rules">
+    <Key>
+      <PropertyRef Name="Split_Rule" />
+    </Key>
+    <Property Name="Split_Rule" Type="int" Nullable="false" />
+    <Property Name="Rule_Type" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="system_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="is_importing" Type="smallint" Nullable="false" />
+    <Property Name="apex_folder" Type="varchar" MaxLength="255" />
+    <Property Name="last_import_date" Type="datetime2" Precision="0" />
+    <Property Name="resend_revisit_date" Type="int" Nullable="false" />
+    <Property Name="resend_status" Type="int" Nullable="false" />
+    <Property Name="show_secondary_info_eclaims" Type="smallint" />
+    <Property Name="max_claims_in_batch" Type="varchar" MaxLength="45" />
+    <Property Name="limit_predeterm_date" Type="smallint" />
+    <Property Name="predeterm_minimum_date" Type="datetime2" Precision="0" />
+  </EntityType>
+  <EntityType Name="unusual_payment_rules">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="process_code" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="operator_code" Type="int" />
+    <Property Name="amount" Type="decimal" Nullable="false" Precision="10" />
+    <Property Name="amount_type_code" Type="int" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_action_log">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="user_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="action_id" Type="int" Nullable="false" />
+    <Property Name="action_taken_time" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="claim_id" Type="int" />
+    <Property Name="additional_notes" Type="varchar" MaxLength="500" />
+    <Property Name="call_id" Type="int" />
+  </EntityType>
+  <EntityType Name="user_logging_rules">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="user_preferences">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="search_form_sent_date" Type="int" />
+    <Property Name="open_search_form" Type="smallint" Nullable="false" />
+    <Property Name="open_eclaims_form" Type="smallint" Nullable="false" />
+    <Property Name="claim_form_left" Type="int" />
+    <Property Name="claim_form_top" Type="int" />
+    <Property Name="claim_form_maximized" Type="smallint" />
+    <Property Name="claim_form_width" Type="int" />
+    <Property Name="claim_form_height" Type="int" />
+    <Property Name="show_my_claims_first" Type="smallint" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="open_search_form" Type="smallint" Nullable="false" />
+    <Property Name="open_eclaims_form" Type="smallint" Nullable="false" />
+    <Property Name="logged_in" Type="smallint" Nullable="false" />
+    <Property Name="viewing_claim_id" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="smallint" Nullable="false" />
+    <Property Name="is_admin" Type="smallint" Nullable="false" />
+  </EntityType>
+</Schema>

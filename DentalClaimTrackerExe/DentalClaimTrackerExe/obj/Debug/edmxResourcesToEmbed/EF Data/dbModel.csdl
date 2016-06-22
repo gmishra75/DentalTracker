@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="claim_productionModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="claim_productionEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="apex_rules_companies" EntityType="claim_productionModel.apex_rules_companies" />
+    <EntitySet Name="apex_rules_procedure_codes" EntityType="claim_productionModel.apex_rules_procedure_codes" />
+    <EntitySet Name="apex_rules_rulelist" EntityType="claim_productionModel.apex_rules_rulelist" />
+    <EntitySet Name="bad_payment_claims" EntityType="claim_productionModel.bad_payment_claims" />
+    <EntitySet Name="batch_claim_list" EntityType="claim_productionModel.batch_claim_list" />
+    <EntitySet Name="call_claim_ids" EntityType="claim_productionModel.call_claim_ids" />
+    <EntitySet Name="calls" EntityType="claim_productionModel.call" />
+    <EntitySet Name="choices" EntityType="claim_productionModel.choice" />
+    <EntitySet Name="claim_batch" EntityType="claim_productionModel.claim_batch" />
+    <EntitySet Name="claim_change_log" EntityType="claim_productionModel.claim_change_log" />
+    <EntitySet Name="claim_sent_history" EntityType="claim_productionModel.claim_sent_history" />
+    <EntitySet Name="claim_status_history" EntityType="claim_productionModel.claim_status_history" />
+    <EntitySet Name="claims" EntityType="claim_productionModel.claim" />
+    <EntitySet Name="claim_status" EntityType="claim_productionModel.claim_status" />
+    <EntitySet Name="clinics" EntityType="claim_productionModel.clinic" />
+    <EntitySet Name="companies" EntityType="claim_productionModel.company" />
+    <EntitySet Name="company_contact_info" EntityType="claim_productionModel.company_contact_info" />
+    <EntitySet Name="data_mapping_fields" EntityType="claim_productionModel.data_mapping_fields" />
+    <EntitySet Name="data_mapping_schema_data" EntityType="claim_productionModel.data_mapping_schema_data" />
+    <EntitySet Name="data_mapping_schemas" EntityType="claim_productionModel.data_mapping_schemas" />
+    <EntitySet Name="insurance_company_groups" EntityType="claim_productionModel.insurance_company_groups" />
+    <EntitySet Name="insurance_company_groups_filters" EntityType="claim_productionModel.insurance_company_groups_filters" />
+    <EntitySet Name="large_choices" EntityType="claim_productionModel.large_choices" />
+    <EntitySet Name="message_recipients" EntityType="claim_productionModel.message_recipients" />
+    <EntitySet Name="message_status" EntityType="claim_productionModel.message_status" />
+    <EntitySet Name="messages" EntityType="claim_productionModel.message" />
+    <EntitySet Name="multiple_choice_answers" EntityType="claim_productionModel.multiple_choice_answers" />
+    <EntitySet Name="notes" EntityType="claim_productionModel.note" />
+    <EntitySet Name="procedures" EntityType="claim_productionModel.procedure" />
+    <EntitySet Name="provider_eligibility_companies" EntityType="claim_productionModel.provider_eligibility_companies" />
+    <EntitySet Name="provider_eligibility_restrictions" EntityType="claim_productionModel.provider_eligibility_restrictions" />
+    <EntitySet Name="question_insurance_companies" EntityType="claim_productionModel.question_insurance_companies" />
+    <EntitySet Name="questions" EntityType="claim_productionModel.question" />
+    <EntitySet Name="schema_migrations" EntityType="claim_productionModel.schema_migrations" />
+    <EntitySet Name="splitter_codes" EntityType="claim_productionModel.splitter_codes" />
+    <EntitySet Name="splitter_rule_details" EntityType="claim_productionModel.splitter_rule_details" />
+    <EntitySet Name="splitter_rules" EntityType="claim_productionModel.splitter_rules" />
+    <EntitySet Name="system_options" EntityType="claim_productionModel.system_options" />
+    <EntitySet Name="unusual_payment_rules" EntityType="claim_productionModel.unusual_payment_rules" />
+    <EntitySet Name="user_action_log" EntityType="claim_productionModel.user_action_log" />
+    <EntitySet Name="user_logging_rules" EntityType="claim_productionModel.user_logging_rules" />
+    <EntitySet Name="user_preferences" EntityType="claim_productionModel.user_preferences" />
+    <EntitySet Name="users" EntityType="claim_productionModel.user" />
+  </EntityContainer>
+  <EntityType Name="apex_rules_companies">
+    <Key>
+      <PropertyRef Name="rule_id" />
+      <PropertyRef Name="company_info" />
+    </Key>
+    <Property Name="rule_id" Type="Int32" Nullable="false" />
+    <Property Name="company_info" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="apex_rules_procedure_codes">
+    <Key>
+      <PropertyRef Name="rule_id" />
+      <PropertyRef Name="procedure_code" />
+    </Key>
+    <Property Name="rule_id" Type="Int32" Nullable="false" />
+    <Property Name="procedure_code" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="apex_rules_rulelist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="apply_primary" Type="Int16" />
+    <Property Name="apply_secondary" Type="Int16" />
+    <Property Name="apply_predeterm" Type="Int16" />
+    <Property Name="apply_to_all" Type="Int16" />
+    <Property Name="name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="rule_text" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="priority" Type="Int32" />
+  </EntityType>
+  <EntityType Name="bad_payment_claims">
+    <Key>
+      <PropertyRef Name="claimid" />
+      <PropertyRef Name="claimdb" />
+    </Key>
+    <Property Name="claimid" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="claimdb" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="is_verified" Type="Int16" Nullable="false" />
+    <Property Name="notes" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="last_update" Type="DateTime" />
+    <Property Name="verified_by" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="batch_claim_list">
+    <Key>
+      <PropertyRef Name="batch_id" />
+      <PropertyRef Name="claim_id" />
+    </Key>
+    <Property Name="batch_id" Type="Int32" Nullable="false" />
+    <Property Name="claim_id" Type="Int32" Nullable="false" />
+    <Property Name="still_in_batch" Type="Int16" Nullable="false" />
+    <Property Name="last_send_date" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="call_claim_ids">
+    <Key>
+      <PropertyRef Name="call_id" />
+      <PropertyRef Name="claim_id" />
+    </Key>
+    <Property Name="call_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="claim_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="call">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="operator" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="created_on" Type="DateTime" />
+    <Property Name="updated_on" Type="DateTime" />
+    <Property Name="claim_id" Type="Int32" />
+    <Property Name="onhold_secs" Type="Int32" />
+    <Property Name="start_time" Type="DateTime" />
+    <Property Name="status_info" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="duration_secs" Type="Int32" />
+    <Property Name="call_status" Type="Int32" />
+    <Property Name="talked_to_human" Type="Int16" />
+    <Property Name="parent_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="choice">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="call_id" Type="Int32" />
+    <Property Name="choice_id" Type="Int32" />
+    <Property Name="operator" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="question" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="answer" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="created_at" Type="DateTime" />
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="claim_batch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="batch_date" Type="DateTime" Nullable="false" />
+    <Property Name="handling" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="source" Type="Int32" />
+    <Property Name="batch_info" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="server_name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="claim_change_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="claim_id" Type="Int32" />
+    <Property Name="field_info" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="old_data" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="new_data" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="change_date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="claim_sent_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="claim_id" Type="Int32" Nullable="false" />
+    <Property Name="sent_date" Type="DateTime" Nullable="false" />
+    <Property Name="send_type" Type="Int32" />
+    <Property Name="is_resend" Type="Int16" />
+  </EntityType>
+  <EntityType Name="claim_status_history">
+    <Key>
+      <PropertyRef Name="claim_id" />
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="claim_id" Type="Int32" Nullable="false" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="date_of_change" Type="DateTime" Nullable="false" />
+    <Property Name="old_status_id" Type="Int32" Nullable="false" />
+    <Property Name="new_status_id" Type="Int32" Nullable="false" />
+    <Property Name="old_revisit_date" Type="DateTime" />
+    <Property Name="new_revisit_date" Type="DateTime" />
+    <Property Name="as_is_flag" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="claim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="company_id" Type="Int32" />
+    <Property Name="created_by" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="created_on" Type="DateTime" />
+    <Property Name="updated_on" Type="DateTime" />
+    <Property Name="date_of_service" Type="DateTime" />
+    <Property Name="amount_of_claim" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="service_description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="patient_first_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="patient_dob" Type="DateTime" />
+    <Property Name="patient_ssn" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="patient_address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_first_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_tax_number" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_license_number" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_bcbs_number" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_phone_number" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_fax_number" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_first_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_dob" Type="DateTime" />
+    <Property Name="subscriber_number" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_alternate_number" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_ssn" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_group_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_group_number" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="open" Type="Int16" />
+    <Property Name="claimidnum" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="claimdb" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="patient_middle_initial" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="patient_last_name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_middle_initial" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_last_name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="patient_address2" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="patient_city" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="patient_state" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="patient_zip" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_address2" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_city" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_state" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_zip" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_middle_initial" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_last_name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_address2" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_city" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_state" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="subscriber_zip" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="company_address_id" Type="Int32" Nullable="false" />
+    <Property Name="resent_date" Type="DateTime" />
+    <Property Name="tracer_date" Type="DateTime" />
+    <Property Name="on_hold_date" Type="DateTime" />
+    <Property Name="sent_date" Type="DateTime" />
+    <Property Name="import_update_flag" Type="Int16" Nullable="false" />
+    <Property Name="revisit_date" Type="DateTime" />
+    <Property Name="handling" Type="String" MaxLength="45" Unicode="true" FixedLength="false" />
+    <Property Name="claim_type" Type="Int32" />
+    <Property Name="primary_claimid" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="primary_claimdb" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="clinic_id" Type="Int32" />
+    <Property Name="owner_id" Type="Int32" />
+    <Property Name="status_id" Type="Int32" />
+    <Property Name="status_last_user_id" Type="Int32" />
+    <Property Name="status_last_date" Type="DateTime" />
+    <Property Name="doctor_provider_id" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="doctor_dentrix_id" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="apex_override_default_message" Type="Int16" />
+    <Property Name="apex_message_text" Type="String" MaxLength="45" Unicode="true" FixedLength="false" />
+    <Property Name="apex_custom_message_text" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="apex_append_message_text" Type="Int16" />
+    <Property Name="nea_number" Type="String" MaxLength="45" Unicode="true" FixedLength="false" />
+    <Property Name="override_address" Type="Int16" />
+  </EntityType>
+  <EntityType Name="claim_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="orderid" Type="Int32" />
+    <Property Name="user_visible" Type="Int16" />
+  </EntityType>
+  <EntityType Name="clinic">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="created_on" Type="DateTime" />
+    <Property Name="updated_on" Type="DateTime" />
+    <Property Name="name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="group_name" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="group_num" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="company_contact_info">
+    <Key>
+      <PropertyRef Name="company_id" />
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="company_id" Type="Int32" Nullable="false" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="city" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="state" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="zip" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="extension" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="notes" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="address2" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="data_mapping_fields">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="field_name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="field_type" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="table_name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="data_mapping_schema_data">
+    <Key>
+      <PropertyRef Name="schema_id" />
+      <PropertyRef Name="mapping_field_id" />
+    </Key>
+    <Property Name="schema_id" Type="Int32" Nullable="false" />
+    <Property Name="mapping_field_id" Type="Int32" Nullable="false" />
+    <Property Name="mapped_to_text" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="data_mapping_schemas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="schema_name" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="data_type" Type="Int32" Nullable="false" />
+    <Property Name="sqlstatement" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="server_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="database_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="user_name" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="pw" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="allow_password_save" Type="Int16" Nullable="false" />
+    <Property Name="claim_id_column" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="company_namecolumn" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="date_column" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="sqlstatementsecondaries" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="sqlstatementpredeterms" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="claim_db_column" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="insurance_company_groups">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="primary_provider" Type="Int32" />
+  </EntityType>
+  <EntityType Name="insurance_company_groups_filters">
+    <Key>
+      <PropertyRef Name="icg_id" />
+      <PropertyRef Name="filter_text" />
+    </Key>
+    <Property Name="icg_id" Type="Int32" Nullable="false" />
+    <Property Name="filter_text" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="large_choices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="call_id" Type="Int32" />
+    <Property Name="choice_id" Type="Int32" />
+    <Property Name="operator" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="question" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="answer" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="created_at" Type="DateTime" />
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="message_recipients">
+    <Key>
+      <PropertyRef Name="message_id" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="message_id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="read" Type="Int16" />
+    <Property Name="read_date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="message_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="from_user_id" Type="Int32" />
+    <Property Name="claim_id" Type="Int32" />
+    <Property Name="message_text" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="message_status_id" Type="Int32" />
+    <Property Name="message_send_date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="multiple_choice_answers">
+    <Key>
+      <PropertyRef Name="question_id" />
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="answer_text" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="note">
+    <Key>
+      <PropertyRef Name="note_id" />
+    </Key>
+    <Property Name="note_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="call_id" Type="Int32" />
+    <Property Name="operator_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" />
+    <Property Name="updated_on" Type="DateTime" />
+    <Property Name="note_text" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="claim_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="procedure">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="externalid" Type="Int32" Nullable="false" />
+    <Property Name="claim_id" Type="Int32" />
+    <Property Name="pl_date" Type="DateTime" />
+    <Property Name="ada_code" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="tooth_range_start" Type="Int32" />
+    <Property Name="tooth_range_end" Type="Int32" />
+    <Property Name="surf_string" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="amount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="provider_eligibility_companies">
+    <Key>
+      <PropertyRef Name="per_id" />
+      <PropertyRef Name="restriction_text" />
+    </Key>
+    <Property Name="per_id" Type="Int32" Nullable="false" />
+    <Property Name="restriction_text" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="provider_eligibility_restrictions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="provider_id" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="switch_to_provider_id" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="insurance_id" Type="Int32" />
+    <Property Name="start_date" Type="DateTime" />
+    <Property Name="end_date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="question_insurance_companies">
+    <Key>
+      <PropertyRef Name="question_id" />
+      <PropertyRef Name="insurance_id" />
+    </Key>
+    <Property Name="question_id" Type="Int32" Nullable="false" />
+    <Property Name="insurance_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="question">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="text" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="parent" Type="Int32" />
+    <Property Name="required_answer" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="is_fork" Type="Int32" />
+    <Property Name="popup_question_text" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="order_id" Type="Int32" />
+    <Property Name="is_classification" Type="Int32" Nullable="false" />
+    <Property Name="linked_status" Type="Int32" />
+    <Property Name="default_revisit_date" Type="Int32" />
+    <Property Name="set_revisit_date" Type="Int32" />
+  </EntityType>
+  <EntityType Name="schema_migrations">
+    <Key>
+      <PropertyRef Name="version" />
+    </Key>
+    <Property Name="version" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="splitter_codes">
+    <Key>
+      <PropertyRef Name="Procedure_Code" />
+      <PropertyRef Name="Carrier" />
+    </Key>
+    <Property Name="Procedure_Code" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="Carrier" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="Split_Rule" Type="Int32" Nullable="false" />
+    <Property Name="Notes" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="splitter_rule_details">
+    <Key>
+      <PropertyRef Name="Split_Rule" />
+      <PropertyRef Name="Procedure_Code" />
+    </Key>
+    <Property Name="Split_Rule" Type="Int32" Nullable="false" />
+    <Property Name="Procedure_Code" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="Rule_value" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="splitter_rules">
+    <Key>
+      <PropertyRef Name="Split_Rule" />
+    </Key>
+    <Property Name="Split_Rule" Type="Int32" Nullable="false" />
+    <Property Name="Rule_Type" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="system_options">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="is_importing" Type="Int16" Nullable="false" />
+    <Property Name="apex_folder" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="last_import_date" Type="DateTime" />
+    <Property Name="resend_revisit_date" Type="Int32" Nullable="false" />
+    <Property Name="resend_status" Type="Int32" Nullable="false" />
+    <Property Name="show_secondary_info_eclaims" Type="Int16" />
+    <Property Name="max_claims_in_batch" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="limit_predeterm_date" Type="Int16" />
+    <Property Name="predeterm_minimum_date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="unusual_payment_rules">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="process_code" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="operator_code" Type="Int32" />
+    <Property Name="amount" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="amount_type_code" Type="Int32" Nullable="false" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_action_log">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="action_id" Type="Int32" Nullable="false" />
+    <Property Name="action_taken_time" Type="DateTime" Nullable="false" />
+    <Property Name="claim_id" Type="Int32" />
+    <Property Name="additional_notes" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="call_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user_logging_rules">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="user_preferences">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="search_form_sent_date" Type="Int32" />
+    <Property Name="open_search_form" Type="Int16" Nullable="false" />
+    <Property Name="open_eclaims_form" Type="Int16" Nullable="false" />
+    <Property Name="claim_form_left" Type="Int32" />
+    <Property Name="claim_form_top" Type="Int32" />
+    <Property Name="claim_form_maximized" Type="Int16" />
+    <Property Name="claim_form_width" Type="Int32" />
+    <Property Name="claim_form_height" Type="Int32" />
+    <Property Name="show_my_claims_first" Type="Int16" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="open_search_form" Type="Int16" Nullable="false" />
+    <Property Name="open_eclaims_form" Type="Int16" Nullable="false" />
+    <Property Name="logged_in" Type="Int16" Nullable="false" />
+    <Property Name="viewing_claim_id" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Int16" Nullable="false" />
+    <Property Name="is_admin" Type="Int16" Nullable="false" />
+  </EntityType>
+</Schema>
