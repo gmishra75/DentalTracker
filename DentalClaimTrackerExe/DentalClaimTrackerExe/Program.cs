@@ -14,6 +14,7 @@ namespace DentalClaimTrackerExe
 {
    public class Program
     {
+
        public static bool changesOnly = false;
        public static bool okToZap = false;
        public static data_mapping_schema dms;

@@ -12,3 +12,6 @@ F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\obj\Debug\DentalClaimTrack
 F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\obj\Debug\DentalClaimTrackerExe.pdb
 F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
 F:\TRELLO\DentalClaimTrackerExe\DentalClaimTrackerExe\obj\Debug\DentalClaimTrackerExe.csprojResolveAssemblyReference.cache
+F:\DentalTracker\DentalTracker\DentalClaimTrackerExe\DentalClaimTrackerExe\bin\Debug\DentalClaimTrackerExe.exe.config
+F:\DentalTracker\DentalTracker\DentalClaimTrackerExe\DentalClaimTrackerExe\obj\Debug\DentalClaimTrackerExe.exe
+F:\DentalTracker\DentalTracker\DentalClaimTrackerExe\DentalClaimTrackerExe\obj\Debug\DentalClaimTrackerExe.pdb
